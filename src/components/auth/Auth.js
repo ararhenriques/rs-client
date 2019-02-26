@@ -70,7 +70,7 @@ class Auth extends Component {
             method: 'POST',
             body: JSON.stringify(this.state),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             }
         })
             .then(res => res.json())
