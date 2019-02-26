@@ -83,7 +83,7 @@ const Chip = (props) => {
           {props.chips.map((chips, id) => (
             <div>
             <Card>
-              <CardImg top width="100%" src={chips.imageURL} alt="Card image cap" />
+              <CardImg top width="50%" src={chips.imageURL} alt="Card image cap" />
               <CardBody>
                 <CardTitle>{chips.chipFlavor}</CardTitle>
                 <CardSubtitle>{chips.rating}</CardSubtitle>
