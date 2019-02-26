@@ -75,9 +75,21 @@ const styles = theme => ({
 // }
 
 
-function Chip(props) {
-    const { classes } = props;
+class Chip extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        artist: '',
+        chipType: '',
+        chipFlavor: '',
+        rating: '',
+        id: '',
+      }
+    }
   
+    test = (e) => {console.log(e.target.id)}
+
+    render() {
     return (
       <div className={classes.root}>
         <GridList cellHeight={180} className={classes.gridList}>
@@ -92,7 +104,7 @@ function Chip(props) {
                 subtitle={chips.rating}
                 actionIcon ={
                   <IconButton className={classes.icon}>
-                    <EditIcon id={chips.id} onClick={chipInfo} />
+                    <EditIcon id={chips.id} onClick={this.test} />
                   </IconButton>
                 }
               />
@@ -102,7 +114,7 @@ function Chip(props) {
       </div>
     );
   }
-  
+} 
   Chip.propTypes = {
     classes: PropTypes.object.isRequired,
   };
