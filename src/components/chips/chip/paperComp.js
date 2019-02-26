@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { Button, Form, FormGroup, Label, Table, Input, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
-function chipInfo(props) {
+const chipInfo = (props) => {
     const {classes} = props;
 
 
@@ -24,7 +24,7 @@ function chipInfo(props) {
                 <tbody>
                     {
                       <div>
-                                    <td>{this.props.chips.artist}</td>
+                                    <td>{props.chips.artist}</td>
                                     <td>{this.props.chips.chipType}</td>
                                     <td>{this.props.chips.chipFlavor}</td>
                                     <td>{this.props.chips.rating}</td>
