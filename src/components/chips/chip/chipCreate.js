@@ -28,20 +28,13 @@ class ChipCreate extends Component {
         console.log(this.state)
         fetch(`${APIURL}/chip`, {
             method: 'POST',
-            body: JSON.stringify({chip:{
-                artist: this.state.artist,
-                chipType: this.state.chipType,
-                chipFlavor: this.state.chipFlavor,
-                rating: this.state.rating,
-                imageURL: this.state.imageURL,
-                
-            }}),
+            body: JSON.stringify(this.state),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('token')
             })
         })
-            .then((res) => console.log(res.json()))
+            .then((res) => res.json())
             .then(chipData => {
                 // after we create a log we want to pull that data from the server.
                 this.props.updateChipsArray();

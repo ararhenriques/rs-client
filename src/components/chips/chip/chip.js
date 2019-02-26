@@ -1,5 +1,6 @@
 import React from 'react';
-//import {Table, Button} from 'reactstrap';
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
@@ -15,22 +16,22 @@ import APIURL from '../../../helpers/environment';
 import chipInfo from './paperComp';
 
 
-const styles = theme => ({
-    root: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-around',
-      overflow: 'hidden',
-      backgroundColor: '#fafafa',
-    },
-    gridList: {
-      width: 500,
-      height: 450,
-    },
-    icon: {
-      color: 'rgba(255, 255, 255, 0.54)',
-    },
-  });
+// const styles = theme => ({
+//     root: {
+//       display: 'flex',
+//       flexWrap: 'wrap',
+//       justifyContent: 'space-around',
+//       overflow: 'hidden',
+//       backgroundColor: '#fafafa',
+//     },
+//     gridList: {
+//       width: 500,
+//       height: 450,
+//     },
+//     icon: {
+//       color: 'rgba(255, 255, 255, 0.54)',
+//     },
+//   });
 
   
 // const Chip = (props) => {
@@ -75,49 +76,40 @@ const styles = theme => ({
 // }
 
 
-class Chip extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        artist: '',
-        chipType: '',
-        chipFlavor: '',
-        rating: '',
-        id: '',
-      }
-    }
+const Chip = (props) => {
   
-    test = (e) => {console.log(e.target.id)}
-
-    render() {
-    return (
-      <div className={classes.root}>
-        <GridList cellHeight={180} className={classes.gridList}>
-          <GridListTile key="Subheader" cols={3} style={{ height: 'auto' }}>
-            <ListSubheader component="div">Snacks</ListSubheader>
-          </GridListTile>
+      return (
+      <div>
           {props.chips.map((chips, id) => (
-            <GridListTile key={chips.imageURL}>
-              <img src={chips.imageURL} alt={chips.artist} />
-              <GridListTileBar
-                title={chips.artist}
-                subtitle={chips.rating}
-                actionIcon ={
-                  <IconButton className={classes.icon}>
-                    <EditIcon id={chips.id} onClick={this.test} />
-                  </IconButton>
-                }
-              />
-            </GridListTile>
+            <div>
+            <Card>
+              <CardImg top width="100%" src={chips.imageURL} alt="Card image cap" />
+              <CardBody>
+                <CardTitle>{chips.chipFlavor}</CardTitle>
+                <CardSubtitle>{chips.rating}</CardSubtitle>
+                <CardText>{chips.artist} {chips.chipType}</CardText>
+                <Button id={chips.id} onClick={props.delete}>Delete</Button>
+                <Button id={chips.id} onClick={e => props.update(e, chips)}>Edit</Button>
+              </CardBody>
+            </Card>
+          </div>
+            // <GridListTile key={chips.imageURL}>
+            //   <img src={chips.imageURL} alt={chips.artist} />
+            //   <GridListTileBar
+            //     title={chips.artist}
+            //     subtitle={chips.rating}
+            //     actionIcon ={
+            //       <IconButton className={classes.icon}>
+            //         <EditIcon id={chips.id} onClick={this.test} />
+            //       </IconButton>
+            //     }
+            //   />
+            // </GridListTile>
           ))}
-        </GridList>
       </div>
     );
-  }
-} 
-  Chip.propTypes = {
-    classes: PropTypes.object.isRequired,
-  };
   
-  export default withStyles(styles)(Chip);
+}
+  
+  export default Chip;
 //export default Chip;
