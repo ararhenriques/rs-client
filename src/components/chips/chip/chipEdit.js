@@ -50,7 +50,7 @@ class chipEdit extends React.Component {
             body: JSON.stringify({chip: {id: event.target.id } }),
             headers: new Headers({
                 'Content-Type': 'application/json',
-                'Authorization': this.props.token
+                'Authorization': localStorage.getItem('token')
             })
         })
         .then((res) => this.fetchChips())

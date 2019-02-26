@@ -5,7 +5,6 @@ import ChipCreate from './chip/chipCreate';
 import ChipInfo from './chip/paperComp';
 import Chip from './chip/chip';
 import APIURL from '../../helpers/environment';
-import chipInfo from './chip/paperComp';
 
 
 class Chips extends React.Component {
@@ -41,7 +40,7 @@ chipDelete = (event) => {
         body: JSON.stringify({chip: {id: event.target.id } }),
         headers: new Headers({
             'Content-Type': 'application/json',
-            'Authorization': this.props.token
+            'Authorization': localStorage.getItem('token')
         })
     })
     .then((res) => this.fetchChips())
