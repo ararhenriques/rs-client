@@ -2,8 +2,10 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import ChipEdit from './chip/chipEdit';
 import ChipCreate from './chip/chipCreate';
+import ChipInfo from './chip/paperComp';
 import Chip from './chip/chip';
 import APIURL from '../../helpers/environment';
+import chipInfo from './chip/paperComp';
 
 
 class Chips extends React.Component {
@@ -88,7 +90,7 @@ chipUpdate = (event, chip) => {
             {
                 //1
               this.state.updatePressed ? <ChipEdit t={this.state.updatePressed} update={this.chipUpdate} chip={this.state.chipToUpdate} /> //2
-              : <div></div>
+              : <chipInfo/>
             }
           </Col>
         </Container>
