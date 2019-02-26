@@ -6,6 +6,7 @@ import ChipInfo from './chip/paperComp';
 import Chip from './chip/chip';
 import APIURL from '../../helpers/environment';
 import chipInfo from './chip/paperComp';
+import chipEdit from './chip/chipEdit';
 
 
 class Chips extends React.Component {
@@ -89,7 +90,7 @@ chipUpdate = (event, chip) => {
           <Col md="12">  
             {
                 //1
-              this.state.updatePressed ? <chipInfo t={this.state.updatePressed} update={this.chipUpdate} chip={this.state.chipToUpdate} /> //2
+              this.state.updatePressed ? <chipEdit t={this.state.updatePressed} update={this.chipUpdate} chip={this.state.chipToUpdate} /> //2
               : <div></div>
             }
           </Col>
