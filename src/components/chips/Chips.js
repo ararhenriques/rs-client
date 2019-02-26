@@ -89,8 +89,8 @@ chipUpdate = (event, chip) => {
           <Col md="12">  
             {
                 //1
-              this.state.updatePressed ? <ChipEdit t={this.state.updatePressed} update={this.chipUpdate} chip={this.state.chipToUpdate} /> //2
-              : <chipInfo/>
+              this.state.updatePressed ? <chipInfo t={this.state.updatePressed} update={this.chipUpdate} chip={this.state.chipToUpdate} /> //2
+              : <div></div>
             }
           </Col>
         </Container>
