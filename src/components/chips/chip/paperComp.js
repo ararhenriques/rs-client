@@ -15,24 +15,22 @@ function chipInfo(props) {
         <Table striped>
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Artist</th>
                         <th>Chip Type</th>
                         <th>Chip Flavor</th>
                         <th>Rating</th>
-                        <th>Image</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                       <div>
-                                    <td>{props.chips.artist}</td>
-                                    <td>{props.chips.chipType}</td>
-                                    <td>{props.chips.chipFlavor}</td>
-                                    <td>{props.chips.rating}</td>
+                                    <td>{this.props.chips.artist}</td>
+                                    <td>{this.props.chips.chipType}</td>
+                                    <td>{this.props.chips.chipFlavor}</td>
+                                    <td>{this.props.chips.rating}</td>
                                     <td>
-                                        <Button id={props.chips.id} onClick={props.delete} color="danger">Delete</Button>|
-                                        <Button id={props.chips.id} onClick={e => props.update(e, props.chips)} color="warning">Update</Button>
+                                        <Button id={this.props.chips.id} onClick={this.props.delete} color="danger">Delete</Button>|
+                                        <Button id={this.props.chips.id} onClick={e => this.props.update(e, this.props.chips)} color="warning">Update</Button>
                                     </td>
                     </div>
                     }
