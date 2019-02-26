@@ -91,8 +91,6 @@ chipUpdate = (event, chip) => {
             }
           </Col>
           </Row>
-          {/* adding edit */}
-          
         </Container> 
       )
   }
