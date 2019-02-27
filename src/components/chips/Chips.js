@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'reactstrap';
+import { Container, Row, Col, Card, CardDeck } from 'reactstrap';
 import styled from 'styled-components' ;
 import ChipEdit from './chip/chipEdit';
 import ChipCreate from './chip/chipCreate';
@@ -83,7 +83,7 @@ chipUpdate = (event, chip) => {
               <ChipCreate token={this.props.token} updateChipsArray={this.fetchChips} />
             </Col>
             <Col md="9">
-              {chips}
+              <CardDeck>{chips}</CardDeck>
             </Col>
             <Col md="3">  
             {
