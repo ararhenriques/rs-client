@@ -23,7 +23,7 @@ const styles = {
     height: '70vh',
     width: '30vw',
     border: 'solid #e65100',
-    margin: '30%',
+    margin: '10%',
   },
   container:{
     display: 'flex',
@@ -106,7 +106,7 @@ const Chip = (props) => {
             <CardDeck>
               <Row>
             <Card style={styles.card}>
-              <CardImg top width="100%" src={chips.imageURL} alt="Card image cap" />
+              <CardImg top width="50%" src={chips.imageURL} alt="Card image cap" />
               <CardBody style={styles.cardbody}>
                 <CardTitle>{chips.artist}</CardTitle>
                 <CardSubtitle style={styles.rating}>{chips.rating}</CardSubtitle>
