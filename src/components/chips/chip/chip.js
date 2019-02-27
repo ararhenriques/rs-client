@@ -106,7 +106,7 @@ const styles = {
 const Chip = (props) => {
   
       return (
-      <div>
+      <CardDeck>
           {props.chips.map((chips, id) => (
             <Card style={styles.card}>
               <CardImg top width="50%" src={chips.imageURL} alt="Card image cap" />
@@ -131,7 +131,7 @@ const Chip = (props) => {
             //   />
             // </GridListTile>
           ))}
-      </div>
+      </CardDeck>
     );
   
 }
