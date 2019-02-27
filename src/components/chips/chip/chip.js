@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container, Col, Row, CardImg, CardText, CardBody,
+import { Card, Container, Col, Row, CardImg, CardText, CardBody, CardDeck
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 import Radium from 'radium';
 import PropTypes from 'prop-types';
@@ -103,7 +103,7 @@ const Chip = (props) => {
       return (
       <div>
           {props.chips.map((chips, id) => (
-            <Container>
+            <CardDeck>
               <Row>
             <Card style={styles.card}>
               <CardImg top width="100%" src={chips.imageURL} alt="Card image cap" />
@@ -116,7 +116,7 @@ const Chip = (props) => {
               </CardBody>
             </Card>
             </Row>
-          </Container>
+          </CardDeck>
             // <GridListTile key={chips.imageURL}>
             //   <img src={chips.imageURL} alt={chips.artist} />
             //   <GridListTileBar

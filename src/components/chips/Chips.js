@@ -9,7 +9,8 @@ import APIURL from '../../helpers/environment';
 import './Chips.css'
 
 const Grid = styled.div`
-`
+float: left;
+width: 80%; `
 class Chips extends React.Component {
     constructor(props){
         super(props);
@@ -83,7 +84,7 @@ chipUpdate = (event, chip) => {
               <ChipCreate token={this.props.token} updateChipsArray={this.fetchChips} />
             </Col>
             <Col md="9">
-              <Card>{chips}</Card>
+              {chips}
             </Col>
             <Col md="3">  
             {
