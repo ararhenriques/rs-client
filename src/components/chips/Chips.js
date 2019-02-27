@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, CardGroup } from 'reactstrap';
-import styled from 'styled-components' 
+import styled from 'styled-components' ;
 import ChipEdit from './chip/chipEdit';
 import ChipCreate from './chip/chipCreate';
 import ChipInfo from './chip/paperComp';
@@ -8,7 +8,8 @@ import Chip from './chip/chip';
 import APIURL from '../../helpers/environment';
 import './Chips.css'
 
-
+const Grid = styled.div`
+`
 class Chips extends React.Component {
     constructor(props){
         super(props);
