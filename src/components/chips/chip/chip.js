@@ -15,7 +15,12 @@ import EditIcon from '@material-ui/icons/Edit'
 //import Papersheet from './paperComp'
 import APIURL from '../../../helpers/environment';
 import chipInfo from './paperComp';
+import styled from 'styled-components' ;
 
+const Grid = styled.div`
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ grid-gap: 20px;`
 
 const styles = {
   card: {
@@ -105,6 +110,7 @@ const Chip = (props) => {
           {props.chips.map((chips, id) => (
             <Container>
               <Row>
+                <Grid>
             <Card style={styles.card}>
               <CardImg top width="50%" src={chips.imageURL} alt="Card image cap" />
               <CardBody style={styles.cardbody}>
@@ -115,6 +121,7 @@ const Chip = (props) => {
                 <Button style={styles.buttons} key='one' id={chips.id} onClick={e => props.update(e, chips)}>Edit</Button>
               </CardBody>
             </Card>
+            </Grid>
             </Row>
           </Container>
             // <GridListTile key={chips.imageURL}>
