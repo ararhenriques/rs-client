@@ -9,7 +9,9 @@ import APIURL from '../../helpers/environment';
 import './Chips.css'
 
 const Grid = styled.div`
- `
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ grid-gap: 20px;`
 class Chips extends React.Component {
     constructor(props){
         super(props);
