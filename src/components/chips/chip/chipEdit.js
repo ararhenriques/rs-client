@@ -107,8 +107,10 @@ class chipEdit extends React.Component {
                             <FormGroup>
                                 <Label for="chipFlavor">Flavor: </Label>
                                 <Input id="chipFlavor" type="text" name="chipFlavor" value={this.state.chipFlavor} placeholder="enter flavor" onChange={this.handleChange} />
+                                <br/>
                                 <Label for="rating">Rating: </Label>
                                 <Input id="rating" type="text" name="rating" value={this.state.rating} placeholder="enter rating /5" onChange={this.handleChange} />
+                                <br/>
                                 <Label for="imageURL">Image: </Label>
                                 <Input id="imageURL" type="text" name="imageURL" value={this.state.imageURL} placeholder="enter image URL" onChange={this.handleChange} />
                             </FormGroup>

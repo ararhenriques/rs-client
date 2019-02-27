@@ -27,9 +27,10 @@ const styles = {
   card: {
     backgroundColor: '#fafafa',
     height: '70vh',
-    width: '25vw',
+    width: '20vw',
     border: 'solid #e65100',
     margin: '10%',
+    padding: '1em'
   },
   container:{
     display: 'flex',
