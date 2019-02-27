@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, CardGroup } from 'reactstrap';
+import styled from 'styled-components' 
 import ChipEdit from './chip/chipEdit';
 import ChipCreate from './chip/chipCreate';
 import ChipInfo from './chip/paperComp';
@@ -76,15 +77,12 @@ chipUpdate = (event, chip) => {
       <Chip chips={this.state.chips} delete={this.chipDelete} update={this.setUpdatedChip} /> :
       <h2>Log the snack to add it to your collection</h2>
       return (
-        <Container>
-          <Row>
-            <Col md="3">
+        <Grid >
+          <Col md="3">
               <ChipCreate token={this.props.token} updateChipsArray={this.fetchChips} />
             </Col>
-          </Row>
-          <Row>
             <Col md="9">
-              {chips}
+              <CardGroup>{chips}</CardGroup>
             </Col>
             <Col md="3">  
             {
@@ -93,8 +91,7 @@ chipUpdate = (event, chip) => {
               : <div></div>
             }
           </Col>
-          </Row>
-        </Container> 
+        </Grid> 
       )
   }
 }
