@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
+import Radium from 'radium';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
@@ -16,22 +17,38 @@ import APIURL from '../../../helpers/environment';
 import chipInfo from './paperComp';
 
 
-// const styles = theme => ({
-//     root: {
-//       display: 'flex',
-//       flexWrap: 'wrap',
-//       justifyContent: 'space-around',
-//       overflow: 'hidden',
-//       backgroundColor: '#fafafa',
-//     },
-//     gridList: {
-//       width: 500,
-//       height: 450,
-//     },
-//     icon: {
-//       color: 'rgba(255, 255, 255, 0.54)',
-//     },
-//   });
+const styles = {
+  card: {
+    backgroundColor: '#fafafa',
+    height: '30vw',
+    width: '30vh',
+    borderRadius: '5%',
+    border: 'solid #e65100'
+  },
+  buttons: {
+    height: '3em',
+    width: '6em',
+    borderRadius: '1.2em',
+    backgroundColor: '#ffa726',
+    borderColor: '#030202',
+    marginTop: '2em',
+
+    ':hover': {
+        backgroundColor: '#ffcc80',
+        borderColor: '#030202'
+    },
+  },
+  cardbody: {
+    border: '#212121',
+    borderRadius: '%5'
+  },
+  rating: {
+    backgroundColor: '#e65100',
+    borderRadius: '5px 20px 5px',
+    textAlign: 'right'
+  },
+
+}
 
   
 // const Chip = (props) => {
@@ -82,14 +99,14 @@ const Chip = (props) => {
       <div>
           {props.chips.map((chips, id) => (
             <div>
-            <Card>
-              <CardImg top width="50%" src={chips.imageURL} alt="Card image cap" />
-              <CardBody>
-                <CardTitle>{chips.chipFlavor}</CardTitle>
-                <CardSubtitle>{chips.rating}</CardSubtitle>
-                <CardText>{chips.artist} {chips.chipType}</CardText>
-                <Button id={chips.id} onClick={props.delete}>Delete</Button>
-                <Button id={chips.id} onClick={e => props.update(e, chips)}>Edit</Button>
+            <Card styles={style.card}>
+              <CardImg top width="100%" src={chips.imageURL} alt="Card image cap" />
+              <CardBody style={styles.cardbody}>
+                <CardTitle>{chips.artist}</CardTitle>
+                <CardSubtitle style={styles.rating}>{chips.rating}</CardSubtitle>
+                <CardText>{chips.chipType} <br/> {chips.chipFlavor}</CardText>
+                <Button style={styles.buttons} key='two' id={chips.id} onClick={props.delete}>Delete</Button>
+                <Button style={styles.buttons} key='one' id={chips.id} onClick={e => props.update(e, chips)}>Edit</Button>
               </CardBody>
             </Card>
           </div>
@@ -111,5 +128,5 @@ const Chip = (props) => {
   
 }
   
-  export default Chip;
+  export default Radium(Chip);
 //export default Chip;
