@@ -20,8 +20,8 @@ import chipInfo from './paperComp';
 const styles = {
   card: {
     backgroundColor: '#fafafa',
-    height: '70vh',
-    width: '30vw',
+    height: '40vh',
+    width: '10vw',
     border: 'solid #e65100',
     margin: '10%',
   },
