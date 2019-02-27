@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container, Col, Row, CardImg, CardText, CardBody, CardDeck
+import { Card, Container, Col, Row, CardImg, CardText, CardBody, CardDeck,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 import Radium from 'radium';
 import PropTypes from 'prop-types';
