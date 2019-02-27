@@ -28,7 +28,7 @@ class ChipCreate extends Component {
         console.log(this.state)
         fetch(`${APIURL}/chip`, {
             method: 'POST',
-            body: JSON.stringify(this.state),
+            body: JSON.stringify({chip: this.state}),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('token')
