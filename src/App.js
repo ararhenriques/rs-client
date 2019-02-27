@@ -12,7 +12,6 @@ import {
 const styles = {
   background: { //ADD ME IN LATER
     backgroundColor: '#424242',
-    height: '100vh'
   }
 }
 
