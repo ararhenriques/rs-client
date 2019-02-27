@@ -8,10 +8,10 @@ import Chip from './chip/chip';
 import APIURL from '../../helpers/environment';
 import './Chips.css'
 
-const Grid = styled.div`
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
- grid-gap: 20px;`
+// const Grid = styled.div`
+//  display: grid;
+//  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//  grid-gap: 20px;`
 class Chips extends React.Component {
     constructor(props){
         super(props);
@@ -81,13 +81,13 @@ chipUpdate = (event, chip) => {
       <h2>Log the snack to add it to your collection</h2>
       return (
         <div >
-          <Col >
+          <Col md="2">
               <ChipCreate token={this.props.token} updateChipsArray={this.fetchChips} />
             </Col>
-            <Col >
-              <Grid>{chips}</Grid>
+            <Col md="8">
+              {chips}
             </Col>
-            <Col md="3">  
+            <Col md="2">  
             {
                 //1
               this.state.updatePressed ? <ChipEdit t={this.state.updatePressed} update={this.chipUpdate} chip={this.state.chipToUpdate} /> //2
