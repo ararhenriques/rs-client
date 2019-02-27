@@ -99,7 +99,7 @@ const Chip = (props) => {
       <div>
           {props.chips.map((chips, id) => (
             <div>
-            <Card styles={style.card}>
+            <Card style={styles.card}>
               <CardImg top width="100%" src={chips.imageURL} alt="Card image cap" />
               <CardBody style={styles.cardbody}>
                 <CardTitle>{chips.artist}</CardTitle>
