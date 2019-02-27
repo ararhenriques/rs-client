@@ -24,6 +24,8 @@ const styles = {
     width: '30vw',
     border: 'solid #e65100',
     margin: '30%',
+  },
+  container:{
     display: 'flex',
     flexDirection: 'row'
   },
