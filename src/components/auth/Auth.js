@@ -84,7 +84,7 @@ class Auth extends Component {
             : (
                 <React.Fragment>
                     <label htmlFor="email">Email:</label><br />
-                    <input style={styles.textField} key='one'onChange={this.handleChange} value={this.state.email} type="text" id="email" /><br />
+                    <input style={styles.textField} key='one'onChange={this.handleChange} value={this.state.email} type="email" id="email" /><br />
                 </React.Fragment>
             )
         return (
@@ -94,7 +94,7 @@ class Auth extends Component {
                 <label htmlFor="userName">Username:</label><br />
                 <input style={styles.textField} key='two' onChange={this.handleChange} value={this.state.userName} type="text" id="userName" /><br />
                 <label htmlFor="password">Password:</label><br />
-                <input style={styles.textField} key='three' onChange={this.handleChange} value={this.state.password} type="password" id="password" /><br />
+                <input style={styles.textField} key='three' min='5' onChange={this.handleChange} value={this.state.password} type="password" id="password" /><br />
                 <button style={styles.buttons} key='four' onClick={this.loginToggle}>Login/Signup Toggle</button><br />
                 <button style={styles.buttons} key='five' type="submit">Submit</button>
             </form>

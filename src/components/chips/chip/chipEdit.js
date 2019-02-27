@@ -22,6 +22,7 @@ const styles = {
         float: 'right',
         border: 'solid black 2px',
         top: '0em',
+        width: '40vw'
 
 
     }
