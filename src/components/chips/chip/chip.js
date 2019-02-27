@@ -23,7 +23,9 @@ const styles = {
     height: '40vh',
     width: '30vw',
     border: 'solid #e65100',
-    margin: '30%'
+    margin: '30%',
+    display: 'flex',
+    flexDirection: 'row'
   },
   buttons: {
     height: '3em',
