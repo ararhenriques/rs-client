@@ -21,7 +21,7 @@ const styles = {
   card: {
     backgroundColor: '#fafafa',
     height: '40vh',
-    width: '40vw',
+    width: '30rem',
     borderRadius: '5%',
     border: 'solid #e65100'
   },
@@ -45,7 +45,8 @@ const styles = {
   rating: {
     backgroundColor: '#e65100',
     borderRadius: '5px 20px 5px',
-    textAlign: 'right'
+    textAlign: 'right',
+    width: '1.5em'
   },
 
 }
@@ -98,7 +99,7 @@ const Chip = (props) => {
       return (
       <div>
           {props.chips.map((chips, id) => (
-            <div>
+            <div className="row">
             <Card style={styles.card}>
               <CardImg top width="100%" src={chips.imageURL} alt="Card image cap" />
               <CardBody style={styles.cardbody}>
