@@ -5,6 +5,7 @@ import ChipCreate from './chip/chipCreate';
 import ChipInfo from './chip/paperComp';
 import Chip from './chip/chip';
 import APIURL from '../../helpers/environment';
+import './Chips.css'
 
 
 class Chips extends React.Component {
