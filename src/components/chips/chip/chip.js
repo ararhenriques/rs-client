@@ -21,9 +21,9 @@ const styles = {
   card: {
     backgroundColor: '#fafafa',
     height: '40vh',
-    width: '30rem',
-    borderRadius: '5%',
-    border: 'solid #e65100'
+    width: '30vw',
+    border: 'solid #e65100',
+    margin: '30%'
   },
   buttons: {
     height: '3em',
