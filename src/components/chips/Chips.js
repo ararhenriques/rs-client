@@ -80,12 +80,12 @@ chipUpdate = (event, chip) => {
       <Chip chips={this.state.chips} delete={this.chipDelete} update={this.setUpdatedChip} /> :
       <h2>Log the snack to add it to your collection</h2>
       return (
-        <Grid >
+        <div >
           <Col >
               <ChipCreate token={this.props.token} updateChipsArray={this.fetchChips} />
             </Col>
             <Col >
-              <CardDeck>{chips}</CardDeck>
+              <Grid>{chips}</Grid>
             </Col>
             <Col md="3">  
             {
@@ -94,7 +94,7 @@ chipUpdate = (event, chip) => {
               : <div></div>
             }
           </Col>
-        </Grid> 
+        </div> 
       )
   }
 }
