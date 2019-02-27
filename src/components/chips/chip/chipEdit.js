@@ -1,6 +1,31 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import APIURL from '../../../helpers/environment';
+import Radium from 'radium';
+
+const styles = {
+    buttons: {
+        height: '3em',
+        width: '6em',
+        borderRadius: '1.2em',
+        backgroundColor: '#ffa726',
+        borderColor: '#030202',
+        marginTop: '2em',
+    
+        ':hover': {
+            backgroundColor: '#ffcc80',
+            borderColor: '#030202'
+        },
+    },
+    editBody: {
+        position: 'absolute',
+        float: 'right',
+        border: 'solid black 2px',
+        top: '0em',
+
+
+    }
+}
 
 
 class chipEdit extends React.Component {
@@ -59,16 +84,16 @@ class chipEdit extends React.Component {
     render() {
         return (
             <div>
-                <Modal isOpen={true} > 
+                <Modal isOpen={true} style={styles.editBody}> 
                     <ModalHeader >Edit a RapSnack</ModalHeader>
                     <ModalBody>
                         <Form onSubmit={this.handleSubmit} >
                             <FormGroup>
-                                <Label for="artist">Artist</Label>
+                                <Label for="artist">Artist: </Label>
                                 <Input id="artist" type="text" name="artist" value={this.state.artist} placeholder="enter artist" onChange={this.handleChange} />
                             </FormGroup>
                             <FormGroup>
-                                <Label for="def">Type</Label>
+                                <Label for="def">Type: </Label>
                                 <Input type="select" name="chipType" id="chipType" value={this.state.chipType} onChange={this.handleChange} placeholder="Type">
                                     <option></option>
                                     <option value="Original">Original</option>
@@ -79,17 +104,17 @@ class chipEdit extends React.Component {
                                 </Input>
                             </FormGroup>
                             <FormGroup>
-                                <Label for="chipFlavor">Flavor</Label>
+                                <Label for="chipFlavor">Flavor: </Label>
                                 <Input id="chipFlavor" type="text" name="chipFlavor" value={this.state.chipFlavor} placeholder="enter flavor" onChange={this.handleChange} />
-                                <Label for="rating">Rating</Label>
+                                <Label for="rating">Rating: </Label>
                                 <Input id="rating" type="text" name="rating" value={this.state.rating} placeholder="enter rating /5" onChange={this.handleChange} />
-                                <Label for="imageURL">Image</Label>
+                                <Label for="imageURL">Image: </Label>
                                 <Input id="imageURL" type="text" name="imageURL" value={this.state.imageURL} placeholder="enter image URL" onChange={this.handleChange} />
                             </FormGroup>
-                            <Button type="submit" color="primary"> Submit </Button>
+                            <Button style={styles.buttons} key="one" type="submit" color="primary"> Submit </Button>
                         </Form>
                         <Form onSubmit={this.handleDelete}>
-                            <Button type="submit" color="primary" > Delete </Button>
+                            <Button style={styles.buttons} key="two" type="submit" color="primary" > Delete </Button>
                         </Form>
                     </ModalBody>
 
