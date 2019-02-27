@@ -12,7 +12,6 @@ class ChipCreate extends Component {
             chipFlavor: '',
             rating: '',
             imageURL: '',
-            owner: ''
         };
     }
 
@@ -45,7 +44,6 @@ class ChipCreate extends Component {
                     chipFlavor: '',
                     rating: '',
                     imageURL: '',
-                    owner: ''
                 })
                 console.log(chipData);
             })
