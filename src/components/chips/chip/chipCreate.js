@@ -105,7 +105,7 @@ class ChipCreate extends Component {
                         <Label for="imageUrl">Image</Label>
                         <Input id="imageUrl" type="text" name="imageURL" value={this.state.imageURL} placeholder="enter image URL" onChange={this.handleChange} />
                     </FormGroup>
-                    <Button type="submit" color="primary"> Submit </Button>
+                    <Button style={styles.buttons} type="submit" color="primary"> Submit </Button>
                 </Form>
             </div>
         )
