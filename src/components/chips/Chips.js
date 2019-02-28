@@ -81,27 +81,23 @@ chipUpdate = (event, chip) => {
       <h2>Log the snack to add it to your collection</h2>
       return (
         <div >
-          <Container>
           
-          <Col sm={4}>
-          <Row>
+          <div class="col-4">
+          <div class="row">
             
               <ChipCreate token={this.props.token} updateChipsArray={this.fetchChips} />
-            </Row>
-            <Row>
+            </div>
+            <div class="row">
             {
               //1
               this.state.updatePressed ? <ChipEdit t={this.state.updatePressed} update={this.chipUpdate} chip={this.state.chipToUpdate} /> //2
               : <div></div>
             }
-          </Row>   
-              </Col>
-          <Col sm={8}>
+          </div>   
+              </div>
+          <div class="col-8">
             {chips}
-          </Col>
-          
-          
-          </Container>
+          </div>
               
 
             
