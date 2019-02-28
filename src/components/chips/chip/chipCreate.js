@@ -96,4 +96,4 @@ class ChipCreate extends Component {
     }
 }
 
-export default ChipCreate;
+export default Radium(ChipCreate);
