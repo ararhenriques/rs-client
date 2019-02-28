@@ -129,4 +129,4 @@ class chipEdit extends React.Component {
     }
 }
 
-export default chipEdit;
+export default Radium(chipEdit);

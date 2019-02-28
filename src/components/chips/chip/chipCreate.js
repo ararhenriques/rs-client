@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import APIURL from '../../../helpers/environment';
+import Radium from 'radium';
+
+const styles ={
+    create: {
+        width: '50vw',
+
+    }
+}
 
 class ChipCreate extends Component {
 
@@ -53,7 +61,7 @@ class ChipCreate extends Component {
 
     render() {
         return (
-            <div>
+            <div style={styles.create}>
                 <h3>Add a RapSnack</h3>
                 <hr />
                 {/* after the form is submitted the data gets sent to the method above*/}
