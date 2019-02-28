@@ -19,7 +19,6 @@ const styles = {
     },
     editBody: {
         position: 'absolute',
-        float: 'right',
         border: 'solid black 2px',
         top: '-250em',
         width: '40vw',
