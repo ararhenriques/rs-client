@@ -27,7 +27,7 @@ const Grid = styled.div`
 const styles = {
   card: {
     backgroundColor: '#fafafa',
-    height: '40vh',
+    height: '50vh',
     width: '10vw',
     border: 'solid #e65100',
     margin: '10%',

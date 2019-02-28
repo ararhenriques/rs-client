@@ -6,7 +6,23 @@ import Radium from 'radium';
 const styles ={
     create: {
         width: '40vw',
+        border: 'solid black 2px',
+        borderRadius: '1.2em',
+        backgroundColor: 'white'
 
+    },
+    buttons: {
+        height: '3em',
+        width: '6em',
+        borderRadius: '1.2em',
+        backgroundColor: '#ffa726',
+        borderColor: '#030202',
+        marginTop: '2em',
+    
+        ':hover': {
+            backgroundColor: '#ffcc80',
+            borderColor: '#030202'
+        },
     }
 }
 
