@@ -30,7 +30,7 @@ const styles = {
     width: '20vw',
     border: 'solid #e65100',
     margin: '10%',
-    padding: '1em'
+    padding: '3em'
   },
   container:{
     display: 'flex',
