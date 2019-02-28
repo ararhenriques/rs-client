@@ -83,19 +83,24 @@ chipUpdate = (event, chip) => {
         <div >
           <Container>
           <Row>
-          <Col md="3">
+          <Col xs="6">
+          <Row>
+            <Col>
               <ChipCreate token={this.props.token} updateChipsArray={this.fetchChips} />
-              </Col>
-          <Col md="9">
-            {chips}
-          </Col>
-          <Col md="12">
+            </Col>
+            <Col xs="6">
             {
               //1
               this.state.updatePressed ? <ChipEdit t={this.state.updatePressed} update={this.chipUpdate} chip={this.state.chipToUpdate} /> //2
               : <div></div>
             }
-          </Col>  
+          </Col>    
+              </Row>
+              </Col>
+          <Col md="9">
+            {chips}
+          </Col>
+          
           </Row>
           </Container>
               
