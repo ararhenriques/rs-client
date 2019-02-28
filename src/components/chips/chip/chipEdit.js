@@ -21,7 +21,7 @@ const styles = {
         position: 'absolute',
         float: 'right',
         border: 'solid black 2px',
-        top: '30em',
+        top: '-150em',
         width: '40vw',
         zIndex: '4'
 
