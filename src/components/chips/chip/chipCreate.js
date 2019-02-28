@@ -5,7 +5,7 @@ import Radium from 'radium';
 
 const styles ={
     create: {
-        width: '50vw',
+        width: '40vw',
 
     }
 }
