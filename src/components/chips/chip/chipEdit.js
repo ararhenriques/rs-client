@@ -18,7 +18,7 @@ const styles = {
         },
     },
     editBody: {
-        position: 'absolute',
+        //position: 'absolute',
         float: 'right',
         border: 'solid black 2px',
         top: '0em',
