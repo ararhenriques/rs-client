@@ -7,7 +7,7 @@ import APIURL from '../../helpers/environment';
 const styles ={
     card: {
         backgroundColor: '#fafafa',
-        height: '50vh',
+        height: '60vh',
         width: '50vh',
         position: 'absolute',
         top: '50%',
