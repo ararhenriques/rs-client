@@ -20,7 +20,7 @@ const styles = {
     editBody: {
         position: 'absolute',
         border: 'solid black 2px',
-        top: '-250em',
+        //top: '-250em',
         width: '40vw',
         zIndex: '4'
 
