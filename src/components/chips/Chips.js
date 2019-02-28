@@ -97,7 +97,7 @@ chipUpdate = (event, chip) => {
           </Col>    
               </Row>
               </Col>
-          <Col md="9">
+          <Col md="12">
             {chips}
           </Col>
           
