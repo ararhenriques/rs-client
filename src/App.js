@@ -8,10 +8,12 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
+import Gasstation from './assets/gasstation.jpg'
+import './App.css';
 
 const styles = {
   background: { //ADD ME IN LATER
-    backgroundColor: '#424242',
+    backgroundImage: "url(" + { Gasstation } + ")",
   }
 }
 
@@ -58,7 +60,9 @@ class App extends Component {
     return(
       <Router>
       <div style={styles.background}>
+      <image src="http://cdm-inc.net/wp-content/uploads/2016/05/shell-inside-2.jpg" class="bg-image"></image>
         <Navbar logout={this.removeSessionToken} />
+      
         {this.viewConductor()}
       </div>
       </Router>

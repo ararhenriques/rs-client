@@ -78,18 +78,17 @@ class ChipCreate extends Component {
     render() {
         return (
             <div style={styles.create}>
-                <h3>Add a RapSnack</h3>
+                <h3>    Add a RapSnack</h3>
                 <hr />
                 {/* after the form is submitted the data gets sent to the method above*/}
                 <Form onSubmit={this.handleSubmit} >
                     <FormGroup>
-                        <Label for="artist">Artist</Label>
+                        <Label for="artist">    Artist: </Label>
                         <Input id="artist" type="text" name="artist" value={this.state.artist} placeholder="enter artist" onChange={this.handleChange} />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="chipType">Type</Label>
+                        <Label for="chipType">  Type: </Label>
                         <Input type="select" name="chipType" id="chipType" value={this.state.chipType} onChange={this.handleChange} placeholder="Type">
-                            <option></option>
                             <option value="Original">Original</option>
                             <option value="Wavy">Wavy</option>
                             <option value="Popcorn">Popcorn</option>
@@ -98,11 +97,13 @@ class ChipCreate extends Component {
                         </Input>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="chipFlavor">Flavor</Label>
+                        <Label for="chipFlavor">    Flavor: </Label>
                         <Input id="chipFlavor" type="text" name="chipFlavor" value={this.state.chipFlavor} placeholder="enter flavor" onChange={this.handleChange} />
-                        <Label for="rating">Rating</Label>
+                        <br></br>
+                        <Label for="rating">    Rating: </Label>
                         <Input id="rating" type="text" name="rating" value={this.state.rating} placeholder="enter rating /5" onChange={this.handleChange} />
-                        <Label for="imageUrl">Image</Label>
+                        <br></br>
+                        <Label for="imageUrl">  Image: </Label>
                         <Input id="imageUrl" type="text" name="imageURL" value={this.state.imageURL} placeholder="enter image URL" onChange={this.handleChange} />
                     </FormGroup>
                     <Button style={styles.buttons} type="submit" color="primary"> Submit </Button>
