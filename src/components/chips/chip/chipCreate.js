@@ -5,7 +5,7 @@ import Radium from 'radium';
 
 const styles ={
     create: {
-        width: '40vw',
+        width: '60vw',
         border: 'solid black 2px',
         borderRadius: '1.2em',
         backgroundColor: 'white'
@@ -23,7 +23,7 @@ const styles ={
             backgroundColor: '#ffcc80',
             borderColor: '#030202'
         },
-    }
+    },
 }
 
 class ChipCreate extends Component {

@@ -12,7 +12,7 @@ const styles ={
         position: 'absolute',
         top: '50%',
         left: '50%',
-        transform: 'translate(-60%, -50%)',
+        transform: 'translate(-50%, -50%)',
         textAlign: 'center',
         borderRadius: '5%',
         border: 'solid #e65100'
