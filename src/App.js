@@ -12,7 +12,7 @@ import Gasstation from './assets/gasstation.jpg'
 import './App.css';
 
 const styles = {
-  background: { //ADD ME IN LATER
+  background: {
     backgroundImage: "url(" + { Gasstation } + ")",
   }
 }
@@ -29,10 +29,6 @@ class App extends Component {
     localStorage.setItem('token',token)
     this.setState({sessionToken: token})
   }
-
-  // viewConductor = () => {
-  //   return this.state.sessionToken !== undefined ? <Chips/> : <Auth tokenHandler={this.storeSessionToken}/>
-  // }
 
   viewConductor = () => {
     if(this.state.sessionToken !== '') {

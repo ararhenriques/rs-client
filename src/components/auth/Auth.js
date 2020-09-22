@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Radium from 'radium'
-//import './Auth.css';
 import APIURL from '../../helpers/environment';
 
 
@@ -40,7 +39,7 @@ const styles ={
 class Auth extends Component {
     constructor() {
         super();
-        this.state = { //holds information related to the component
+        this.state = {
             login: true,
             userName: '',
             email: '',
@@ -49,7 +48,7 @@ class Auth extends Component {
     }
 
     handleChange = (event) => {
-        this.setState({ [event.target.id]: event.target.value }) //does not mutate the earlier state, just makes a new one
+        this.setState({ [event.target.id]: event.target.value })
     }
 
     loginToggle = (event) => {
@@ -103,5 +102,3 @@ class Auth extends Component {
 }
 
 export default Radium(Auth);
-
-//add form validation!!

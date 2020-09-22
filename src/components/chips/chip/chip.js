@@ -9,10 +9,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
-//import InfoIcon from '@material-ui/icons/Info';
-import EditIcon from '@material-ui/icons/Edit'
-//import DeleteIcon from '@material-ui/icons/Delete'
-//import Papersheet from './paperComp'
+import EditIcon from '@material-ui/icons/Edit';
 import APIURL from '../../../helpers/environment';
 import chipInfo from './paperComp';
 import styled from 'styled-components' ;
@@ -63,49 +60,6 @@ const styles = {
 
 }
 
-  
-// const Chip = (props) => {
-//     return (
-//         <div>
-//             <h3>Your Snacks</h3>
-//             <hr />
-//             <Table striped>
-//                 <thead>
-//                     <tr>
-//                         <th>#</th>
-//                         <th>Artist</th>
-//                         <th>Chip Type</th>
-//                         <th>Chip Flavor</th>
-//                         <th>Rating</th>
-//                         <th>Image</th>
-//                     </tr>
-//                 </thead>
-//                 <tbody>
-//                     {
-//                         props.chips.map((chips, id) => {
-//                             return (
-//                                 <tr key={id}>
-//                                     <th scope="row">{chips.id}</th>
-//                                     <td>{chips.artist}</td>
-//                                     <td>{chips.chipType}</td>
-//                                     <td>{chips.chipFlavor}</td>
-//                                     <td>{chips.rating}</td>
-//                                     <td>{chips.imageURL}</td>
-//                                     <td>
-//                                         <Button id={chips.id} onClick={props.delete} color="danger">Delete</Button>|
-//                                         <Button id={chips.id} onClick={e => props.update(e, chips)} color="warning">Update</Button>
-//                                     </td>
-//                                 </tr>
-//                             )
-//                         })
-//                     }
-//                 </tbody>
-//             </Table>
-//         </div>
-//     );
-// }
-
-
 const Chip = (props) => {
   
       return (
@@ -130,4 +84,3 @@ const Chip = (props) => {
 }
   
   export default Radium(Chip);
-//export default Chip;

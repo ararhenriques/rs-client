@@ -40,7 +40,6 @@ class ChipCreate extends Component {
     }
 
     handleChange = (event) => {
-        // try console.log(event)  to see when this method will be invoked
         const data = (event.target.value).toLowerCase();
         this.setState({
             [event.target.name]: data
@@ -60,7 +59,6 @@ class ChipCreate extends Component {
         })
             .then((res) => res.json())
             .then(chipData => {
-                // after we create a log we want to pull that data from the server.
                 this.props.updateChipsArray();
                 this.setState({
                     artist: '',
@@ -80,7 +78,6 @@ class ChipCreate extends Component {
             <div style={styles.create}>
                 <h3>    Add a RapSnack</h3>
                 <hr />
-                {/* after the form is submitted the data gets sent to the method above*/}
                 <Form onSubmit={this.handleSubmit} >
                     <FormGroup>
                         <Label for="artist">    Artist: </Label>
